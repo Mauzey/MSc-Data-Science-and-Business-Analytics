@@ -4,10 +4,10 @@ import seaborn as sns
 import pandas as pd
 import math
 
-sns.set_style('whitegrid')
+sns.set_style('whitegrid') # configure seaborn
 
 def compute_snells_law(incidence_angle, verbose=False):
-    """ Compute Snell's law, given the angle of incidence ('incidence_angle') in degrees
+    """ Computes Snell's law, given the angle of incidence ('incidence_angle') in degrees
 
         Returns the angle of refraction in degrees
     """

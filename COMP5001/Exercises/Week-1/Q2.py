@@ -1,7 +1,7 @@
 # import
 import statistics
 
-def calculate(n, verbose=False):
+def calculate_squares(n, verbose=False):
     """ Calculates the square of each value between 1 and 'n', before returning:
 
             - The sum of these squares
@@ -27,4 +27,4 @@ def calculate(n, verbose=False):
     return squares_sum, squares_std_dev
 ###
 
-calculate(4, verbose=True)
+calculate_squares(4, verbose=True)
