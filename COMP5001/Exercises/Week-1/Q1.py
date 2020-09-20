@@ -39,7 +39,7 @@ def compute_snells_law(incidence_angle, verbose=False):
 # list of [incidence_angle, refraction_angle] data
 data = []
 for angle in range(-90, 91):
-    data.append([angle, compute_snells_law(angle)])
+    data.append([angle, compute_snells_law(angle, verbose=False)])
 
 # insert that data into a dataframe
 df = pd.DataFrame(data, columns=['Incidence_Angle', 'Refraction_Angle'])
