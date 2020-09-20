@@ -26,7 +26,6 @@ sns.histplot(df['Leak_Size'], color='#bc5090')
 
 # configure the plot and show it
 plt.xscale('log')
-plt.yscale('log')
 plt.xlabel('Leak Size (kg)')
 plt.ylabel('Count')
 plt.title('Histogram of the Size of Oil Rig Spills')
