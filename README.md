@@ -1,1 +1,1 @@
-# MSc-Data-Science-and-Business-Analytics
+# MSc Data Science and Business Analytics
