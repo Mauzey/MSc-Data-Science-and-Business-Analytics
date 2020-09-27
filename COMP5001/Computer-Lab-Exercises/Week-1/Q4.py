@@ -1,3 +1,7 @@
+# Q4: Python Manipulation
+#   Compute the standard deviation and the sum of a series of squares should
+#   be computed
+
 # import
 import statistics
 
