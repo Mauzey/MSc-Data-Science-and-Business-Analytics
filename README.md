@@ -1,4 +1,5 @@
 # MSc Data Science and Business Analytics
+Repository of work carried out during the MSc Data Science and Business Analytics programme at Plymouth University (2020-21) 
 
 ## Modules
 * [MATH513](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513): Big Data and Social Network Visualization
