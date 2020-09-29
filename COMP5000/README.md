@@ -1,4 +1,4 @@
-# COMP5000
+# COMP5000 | Software Development and Databases
 This module will provide knowledge and skills in software development and database design. It will cover computational problem solving, abstraction, and problem decomposition. The module will enable students to identify appropriate system requirements related to the relational database model.
 
 ## Week 1
