@@ -1,4 +1,4 @@
-# MATH513
+# MATH513 | Big Data and Social Network Visualization
 Sophisticated analytics techniques are needed to visualize today's increasing quantities of Big Data. Up-to-date R tools including dplyr for data manipulation, ggplot2 for visualization, and knitr/LaTeX for document presentation are studied. These are applied to database interrogation, social network visualization, and sentiment analysis. The module provides considerable experience of writing professionally documented R code using RStudio.
 
 ## Session 1 - Introduction
