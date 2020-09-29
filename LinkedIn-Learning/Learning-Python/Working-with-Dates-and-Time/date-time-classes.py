@@ -3,8 +3,9 @@ from datetime import datetime
 from datetime import date
 from datetime import time
 
+
 def main():
-    ## DATE OBJECTS
+    # DATE OBJECTS
     # get today's date from the simple today() method from the date class
     today = date.today()
     print("Today's date is: ", today)
@@ -15,7 +16,7 @@ def main():
     # retrieve today's weekday number (0: monday, 6: sunday)
     print("Today's weekday # is: ", today.weekday())
     
-    ## DATETIME OBJECTS
+    # DATETIME OBJECTS
     # get today's date from the datetime class
     today = datetime.now()
     print("The current date and time is: ", today)
@@ -24,5 +25,6 @@ def main():
     t = datetime.time(datetime.now())
     print("The current time is: ", t)
     
+
 if __name__ == '__main__':
     main()

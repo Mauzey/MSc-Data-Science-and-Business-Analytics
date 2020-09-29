@@ -1,6 +1,7 @@
 # import
 import xml.dom.minidom
 
+
 def main():
     # use the parse() function to load and parse an xml file
     doc = xml.dom.minidom.parse("samplexml.xml")
@@ -24,6 +25,7 @@ def main():
     print("\n%d skills: " % skills.length)
     for skill in skills:
         print(skill.getAttribute("name"))
+
 
 if __name__ == '__main__':
     main()

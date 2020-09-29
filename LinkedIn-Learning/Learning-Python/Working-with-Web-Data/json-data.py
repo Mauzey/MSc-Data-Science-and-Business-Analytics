@@ -2,7 +2,8 @@
 import urllib.request
 import json
 
-def printResults(data):
+
+def print_results(data):
     # use the json module to load the string data into a dictionary
     json_data = json.loads(data)
     
@@ -29,9 +30,10 @@ def printResults(data):
     print("Events that were felt:")
     for i in json_data["features"]:
         felt_reports = i["properties"]["felt"]
-        if felt_reports != None and felt_reports > 0:
+        if felt_reports is not None and felt_reports > 0:
             print("%2.1f" % i["properties"]["mag"], i["properties"]["place"],
                   " reported " + str(felt_reports) + " times")
+
 
 def main():
     # define a variable to hold the source url
@@ -43,11 +45,12 @@ def main():
     web_url = urllib.request.urlopen(url_data)
     print("Result code: " + str(web_url.getcode()))
     
-    if (web_url.getcode() == 200):
+    if web_url.getcode() == 200:
         data = web_url.read()
-        printResults(data)
+        print_results(data)
     else:
         print("Received error, cannot parse results")
+
 
 if __name__ == '__main__':
     main()

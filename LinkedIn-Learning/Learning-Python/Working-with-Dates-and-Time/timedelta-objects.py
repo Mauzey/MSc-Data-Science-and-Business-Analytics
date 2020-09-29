@@ -4,6 +4,7 @@ from datetime import datetime
 from datetime import date
 from datetime import time
 
+
 def main():
     # construct a basic timedelta and print it
     print(timedelta(days=365, hours=5, minutes=1))
@@ -31,12 +32,13 @@ def main():
     # use date comparison to see if april fools' day has already happened this
     #   year. If it has, use the replace() function to get the date for next year
     if afd < today:
-        print("April fools' day has already happened, %d days ago" % ((today-afd).days))
+        print("April fools' day has already happened, %d days ago" % (today-afd).days)
         afd = afd.replace(year=today.year + 1)
     
     # now calculate the amount of time until april fools' day
     time_to_afd = afd - today
     print("It's just", time_to_afd.days, "days until april fools' day")
+
 
 if __name__ == '__main__':
     main()
