@@ -9,4 +9,7 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 * [practical-1.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-1/practical-1.R): Basic R code which serves as an introduction to the R language
 
 ## Session 2 - Reading Data Manipulation
-* ...
+* [MATH513_Questionnaire_Data.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-2/MATH513_Questionnaire_Data.csv): CSV data used during this session
+* [MATH513_Questionnaire_Data.xlsx](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-2/MATH513_Questionnaire_Data.xlsx): XLSX data used during this session
+* [exercise.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-2/exercise.R): Reading In and Manipulating Data with readr and dplyr
+* [practical-2.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-2/practical-2.R): R code which introduces reading and manipulating data in R with readr and dplyr
