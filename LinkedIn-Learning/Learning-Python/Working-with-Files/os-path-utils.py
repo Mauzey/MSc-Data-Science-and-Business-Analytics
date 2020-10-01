@@ -6,6 +6,7 @@ import datetime
 import time
 import os
 
+
 def main():
     # print the name of the operating system
     print(os.name)
@@ -30,6 +31,7 @@ def main():
     
     print("It has been " + str(td) + " since the file was last modified...")
     print("...or, " + str(td.total_seconds()) + " seconds")
+
 
 if __name__ == '__main__':
     main()

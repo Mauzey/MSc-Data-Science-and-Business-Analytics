@@ -1,6 +1,7 @@
 # import
 import urllib.request
 
+
 def main():
     # open the url and store to 'web_url'
     web_url = urllib.request.urlopen("http://www.google.com")
@@ -8,7 +9,8 @@ def main():
     
     # read contents of the url into 'data'
     data = web_url.read()
-    #print(data)
+    # print(data)
+
 
 if __name__ == '__main__':
     main()

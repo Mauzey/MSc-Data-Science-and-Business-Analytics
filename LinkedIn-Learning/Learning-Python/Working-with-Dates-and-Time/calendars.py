@@ -1,6 +1,7 @@
 # import
 import calendar
 
+
 def main():
     # create a plain text calendar
     c = calendar.TextCalendar(calendar.SUNDAY)
@@ -8,7 +9,7 @@ def main():
     print(st)
     
     # create an HTML formatted calendar
-    hc= calendar.HTMLCalendar(calendar.SUNDAY)
+    hc = calendar.HTMLCalendar(calendar.SUNDAY)
     st = hc.formatmonth(2020, 1)
     print(st)
     
@@ -30,7 +31,7 @@ def main():
     #   each month, we can use this script:
     print("Team meetings will be on: ")
     
-    for month in range(1,13):
+    for month in range(1, 13):
         cal = calendar.monthcalendar(2020, month)
         week_one = cal[0]
         week_two = cal[1]
@@ -42,6 +43,7 @@ def main():
             meet_day = week_two[calendar.FRIDAY]
         
         print("%10s %2d" % (calendar.month_name[month], meet_day))
+
 
 if __name__ == '__main__':
     main()
