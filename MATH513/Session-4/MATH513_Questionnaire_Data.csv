@@ -1,0 +1,19 @@
+Height,Age,Sex,BirthPlace,SiblingsNo,EatMeat,DrinkCoffee,LikeBeer,Sports,Driver,LeftHanded,Abroad,Sleep,Rent,Happy_accommodation,Distance,Travel_time,Mode_of_transport,Safe
+170,23,Female,essex,1,Yes,Yes,No,Yes,Yes,No,Yes,6,700,Yes,1,20,Foot,Yes
+188,22.4,Male,London,1,Yes,Yes,No,No,No,No,Yes,6,370,Yes,0.8,5,Foot,Yes
+180,30.12,Male,Athens,0,Yes,Yes,Yes,Yes,Yes,Yes,No,8,620,Yes,0.1,3,Foot,Yes
+185,21,Male,China,0,Yes,Yes,Yes,Yes,No,No,Yes,9,600,No,2,20,Foot,No
+170,22.1,Female,Plymouth,2,Yes,Yes,No,No,Yes,No,Yes,5,0,Yes,20,40,Car,Yes
+182,25,Male,Nigeria,4,Yes,No,No,Yes,No,No,No,8,5000,Yes,0.6,15,Foot,Yes
+175,22.42,Male,Exeter,1,Yes,No,No,No,No,Yes,Yes,9,0,Yes,45,90,Train,Yes
+187,24.75,Male,USA,4,Yes,Yes,Yes,Yes,Yes,No,No,7,600,No,1.5,15,Bus,Yes
+170,12,Male,Hong Kong,1,Yes,No,No,Yes,No,No,Yes,8,100,Yes,0.5,15,Foot,No
+168,23,Male,Surrey,2,Yes,Yes,No,No,Yes,No,Yes,8,480,Yes,0.5,5,Foot,Yes
+162,24,Female,Home Kong,1,Yes,No,No,No,No,No,Yes,7,350,Yes,1.1,25,Foot,Yes
+168,22,Female,Malaysia,2,Yes,Yes,No,Yes,Yes,No,Yes,8,350,Yes,0.5,12,Foot,Yes
+165,28,Female,india,0,Yes,Yes,Yes,No,Yes,No,Yes,8,450,Yes,0.5,10,Foot,Yes
+158,24.25,Female,China,0,Yes,Yes,Yes,Yes,Yes,No,Yes,8,370,Yes,0.4,6,Foot,Yes
+171,35.5,Male,Plymouth,6,Yes,Yes,No,Yes,Yes,No,Yes,8,450,Yes,1.5,20,Foot,Yes
+163,21,Female,CHINA,0,Yes,Yes,No,Yes,Yes,No,Yes,9,480,Yes,99,10,Foot,Yes
+186,24.75,Male,Dusseldorf,3,Yes,No,Yes,Yes,Yes,No,Yes,8,560,Yes,1.4,23,Foot,Yes
+177,22.15,Male,Bournemouth,1,Yes,Yes,Yes,No,Yes,No,Yes,8,322,Yes,0.3,6,Foot,Yes
