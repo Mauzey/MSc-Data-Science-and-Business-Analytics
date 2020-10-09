@@ -18,11 +18,11 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 
 ## Session 4 - ggplot2 and Other Data Displays
 * Exercises
-  * [exercise-1.R](): Customizing Scatter Plots
-  * [exercise-2.R](): Adding Logarithmic Scaling and Regression Lines to Plots
-  * [exercise-3.R](): Further Scatter Plots, Box Plots, and Histograms
-  * [exercise-4.R](): Further Box Plots
-* [MATH513_Questionnaire_Data.csv](): CSV data used in exercise 2
-* [Module_Marks_Invented_Example.csv](): CSV data used in exercise 4
-* [companies.xlsx](): XLSX data used in exercise 3
-* [practical-4.R](): R code which introduces ggplot2
+  * [exercise-1.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/exercises/exercise-1.R): Customizing Scatter Plots
+  * [exercise-2.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/exercises/exercise-2.R): Adding Logarithmic Scaling and Regression Lines to Plots
+  * [exercise-3.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/exercises/exercise-3.R): Further Scatter Plots, Box Plots, and Histograms
+  * [exercise-4.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/exercises/exercise-4.R): Further Box Plots
+* [MATH513_Questionnaire_Data.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/MATH513_Questionnaire_Data.csv): CSV data used in exercise 2
+* [Module_Marks_Invented_Example.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/Module_Marks_Invented_Example.csv): CSV data used in exercise 4
+* [companies.xlsx](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/companies.xlsx): XLSX data used in exercise 3
+* [practical-4.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/practical-4.R): R code which introduces ggplot2
