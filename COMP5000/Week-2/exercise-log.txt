@@ -1,0 +1,5 @@
+Time: Wed Oct  7 17:06:22 2020
+press-ups: 25
+sit-ups: 15
+jog: 300
+
