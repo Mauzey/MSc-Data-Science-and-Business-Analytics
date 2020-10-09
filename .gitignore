@@ -1,6 +1,7 @@
 /.vscode
 /.idea
-.Rproj.user
+
 .RData
 .Rhistory
-MATH513.Rproj
+.Rproj
+.Rproj.user
