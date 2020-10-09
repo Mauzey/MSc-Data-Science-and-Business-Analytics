@@ -8,3 +8,6 @@ Repository of work carried out during the MSc Data Science and Business Analytic
 * [COMP5000](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/COMP5000/): Software Development and Databases
 * [ACF719](#): Financial Management
 * [ACF703](#): International Finance
+
+## Additional
+* [LinkedIn-Learning](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/LinkedIn-Learning): Code pertaining to various LinkedIn Learning courses that related to the MSc programme.
