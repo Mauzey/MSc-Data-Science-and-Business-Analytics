@@ -13,3 +13,16 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 * [MATH513_Questionnaire_Data.xlsx](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-2/MATH513_Questionnaire_Data.xlsx): XLSX data used during this session
 * [exercise.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-2/exercise.R): Reading In and Manipulating Data with readr and dplyr
 * [practical-2.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-2/practical-2.R): R code which introduces reading and manipulating data in R with readr and dplyr
+
+## Session 3 - ...
+
+## Session 4 - ggplot2 and Other Data Displays
+* Exercises
+  * [exercise-1.R](): Customizing Scatter Plots
+  * [exercise-2.R](): Adding Logarithmic Scaling and Regression Lines to Plots
+  * [exercise-3.R](): Further Scatter Plots, Box Plots, and Histograms
+  * [exercise-4.R](): Further Box Plots
+* [MATH513_Questionnaire_Data.csv](): CSV data used in exercise 2
+* [Module_Marks_Invented_Example.csv](): CSV data used in exercise 4
+* [companies.xlsx](): XLSX data used in exercise 3
+* [practical-4.R](): R code which introduces ggplot2
