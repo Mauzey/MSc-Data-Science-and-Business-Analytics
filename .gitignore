@@ -1,3 +1,6 @@
 /.vscode
 /.idea
 .Rproj.user
+.RData
+.Rhistory
+MATH512.Rproj
