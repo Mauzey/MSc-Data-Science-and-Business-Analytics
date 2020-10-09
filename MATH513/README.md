@@ -14,7 +14,17 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 * [exercise.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-2/exercise.R): Reading In and Manipulating Data with readr and dplyr
 * [practical-2.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-2/practical-2.R): R code which introduces reading and manipulating data in R with readr and dplyr
 
-## Session 3 - ...
+## Session 3 - Data Manipulation with tidyr
+* Exercises
+  * [exercise-1.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-3/exercises/exercise-1.R): Manipulating bank data
+  * [exercise-2.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-3/exercises/exercise-2.R): Manipulating customer satisfaction data
+* [MATH513_Questionnaire_Data.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-3/MATH513_Questionnaire_Data.csv): Data used during this session
+* [PassengersInfo.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-3/PassengersInfo.csv): CSV data used during [exercise-2](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-3/exercises/exercise-2.R)
+* [PersonalInfo.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-3/PersonalInfo.csv):
+* [Questionnaire.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-3/Questionnaire.csv):
+* [bank.xlsx](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-3/bank.xlsx): CSV data used during [exercise-1](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-3/exercises/exercise-1.R)
+* [practical-3.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-3/practical-3.R): R code which covers data manipulation and an introduction to tidyr
+* [wide_data.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-3/wide_data.csv): CSV data used during this session
 
 ## Session 4 - ggplot2 and Other Data Displays
 * Exercises
