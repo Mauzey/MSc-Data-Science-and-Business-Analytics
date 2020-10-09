@@ -13,7 +13,7 @@
 #
 # If you have RStudio installed on your machine or you are using the University 
 # machines and your working directory is in your memory stick on the "D" drive:
-setwd("D://MATH513")
+#setwd("D://MATH513")
 #
 # You may have a different working directory
 #
@@ -41,8 +41,8 @@ setwd("D://MATH513")
 library(readr)
 #
 # Read in the data in the file "MATH513_Questionnaire_Data.csv"
-#
-qd <- read_csv("MATH513_Questionnaire_Data.csv")
+
+qd <- read_csv("Session-3/MATH513_Questionnaire_Data.csv")
 #
 # See the first few rows
 #
@@ -231,7 +231,7 @@ full_join(a, b_var, by = c("x1" = "x1_var"))
 # Make sure that you've set the working directory appropriately
 #
 library(readr)
-wide <- read_csv("wide_data.csv")
+wide <- read_csv("Session-3/wide_data.csv")
 wide
 names(wide)
 #
@@ -311,3 +311,4 @@ ggplot(long_with_times,
   labs(x = "Observation time (months)")
 #
 #
+
