@@ -36,3 +36,12 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 * [Module_Marks_Invented_Example.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/Module_Marks_Invented_Example.csv): CSV data used in [exercise-4](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/exercises/exercise-4.R)
 * [companies.xlsx](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/companies.xlsx): XLSX data used in [exercise-3](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/exercises/exercise-3.R)
 * [practical-4.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/practical-4.R): R code which introduces ggplot2
+
+## Session 5 - Function Writing
+* Exercises
+  * [exercise-1.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-5/exercises/exercise-1.R): Basic function writing
+  * [exercise-2.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-5/exercises/exercise-2.R): Further function writing
+* [MATH513_Questionnaire_Data.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-5/MATH513_Questionnaire_Data.csv): CSV data used during this session
+* [practical-5.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-5/practical-5.R): R code which introduces function writing
+
+## Session 6 - Twitter
