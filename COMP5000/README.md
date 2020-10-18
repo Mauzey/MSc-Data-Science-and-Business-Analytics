@@ -17,3 +17,12 @@ An introduction to databases, as well as more information regarding Python dicti
 * [Q4.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-2/Q4.py): Basic Statistical Analysis with Python
 * [exercise-log.txt](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-2/exercise-log.txt): Output file from Q3
 * [oil-rig-spills.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-2/oil-rig-spills.csv): Oil-rig spill data used in Q4, gathered from [The Guardian](https://www.theguardian.com/news/datablog/2011/jul/06/oil-spills-north-sea-rigs).
+
+## Week 3
+An introduction to SQL and Python modules, plotting, and exceptions
+* [Q1.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-3/Q1.py): Plotting data from a .csv file
+* [Q2.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-3/Q2.py): Plotting a Histogram from a .JSON file
+* [Q3.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-3/Q3.py): Using SQL to extract data from a database
+* [household-waste.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-3/household-waste.csv): Data used in Q1
+* [near-earth-asteroids-comets.json](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-3/near-earth-asteroids-comets.json): Data used in Q2
+* [simplefolks.sqlite](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-3/simplefolks.sqlite): Data used in Q3
