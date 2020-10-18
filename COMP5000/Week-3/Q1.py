@@ -14,10 +14,10 @@ data.loc[0, 'Area'] = 'Plymouth'
 data.loc[1, 'Area'] = 'England'
 
 # drop '2015' column as it contains no observations
-data = data.drop(['2015'], axis = 1)
+data = data.drop(['2015'], axis=1)
 
 # melt individual year columns into year/percentage
-data = pd.melt(data, id_vars = ['Area'], var_name = 'Year', value_name = 'Recycling_Percentage')
+data = pd.melt(data, id_vars=['Area'], var_name='Year', value_name='Recycling_Percentage')
 
 # convert 'Year' column from object to integer
 data['Year'] = pd.to_numeric(data['Year'])
