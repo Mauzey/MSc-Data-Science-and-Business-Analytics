@@ -12,7 +12,7 @@ An overview of the module, as well as an introduction to Data Science and Python
 ## Week 2
 An introduction to databases, as well as more information regarding Python dictionaries and I/O.
 * [Q1.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-2/Q1.py): String Manipulation with Python
-* [Q2.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-2/Q2.py): counting words in a string with Python
+* [Q2.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-2/Q2.py): Counting words in a string with Python
 * [Q3.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-2/Q3.py): Writing to a text file with Python
 * [Q4.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-2/Q4.py): Basic Statistical Analysis with Python
 * [exercise-log.txt](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-2/exercise-log.txt): Output file from Q3
