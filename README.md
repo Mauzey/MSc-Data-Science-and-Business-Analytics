@@ -10,4 +10,4 @@ Repository of work carried out during the MSc Data Science and Business Analytic
 * [ACF703](#): International Finance
 
 ## Additional
-* [LinkedIn-Learning](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/LinkedIn-Learning): Code pertaining to various LinkedIn Learning courses that related to the MSc programme.
+* [LinkedIn-Learning](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/LinkedIn-Learning): Code pertaining to various LinkedIn Learning courses that relate to the MSc programme.
