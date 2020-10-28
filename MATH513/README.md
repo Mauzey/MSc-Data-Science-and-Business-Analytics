@@ -54,3 +54,7 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 ## Session 8 - R Markdown
 * [exercise.Rmd](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-8/exercise.Rmd): R Markdown document created as part of this session's practical exercise
 * [exercise.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-8/exercise.pdf): .pdf export of the exercise markdown document
+
+## Session 9 - R Packages (part 1)
+
+## Session 10 - R Packages (part 2)
