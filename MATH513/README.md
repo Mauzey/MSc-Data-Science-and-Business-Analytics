@@ -46,8 +46,11 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 
 ## Session 6 - Twitter
 
-## Session 7 - 
+## Session 7 - Working with Databases in R
+* [exercise.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-7/exercise.R): Working with SQLite databases in R
+* [practical-7.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-7/practical-7.R): R code which introduces SQLite databases in R
+* [sailing.sqlite3](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-7/sailing.sqlite3): SQLite data used in this session's [exercise](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-7/exercise.R).
 
 ## Session 8 - R Markdown
-* [exercise.Rmd](): R Markdown document created as part of this session's practical exercise
-* [exercise.pdf](): .pdf export of the exercise markdown document
+* [exercise.Rmd](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-8/exercise.Rmd): R Markdown document created as part of this session's practical exercise
+* [exercise.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-8/exercise.pdf): .pdf export of the exercise markdown document
