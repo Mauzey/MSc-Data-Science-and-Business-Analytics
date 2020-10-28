@@ -45,3 +45,9 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 * [practical-5.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-5/practical-5.R): R code which introduces function writing
 
 ## Session 6 - Twitter
+
+## Session 7 - 
+
+## Session 8 - R Markdown
+* [exercise.Rmd](): R Markdown document created as part of this session's practical exercise
+* [exercise.pdf](): .pdf export of the exercise markdown document
