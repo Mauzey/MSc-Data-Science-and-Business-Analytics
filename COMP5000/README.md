@@ -34,3 +34,10 @@ An introduction to Regular Expressions, Jupyter Notebooks, and SQL SELECT
 * [Q2.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-4/Q3.py): SQL and Python
 * [sakila.db](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-4/sakila.db): Database used in Q2
 * [student_record.db](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-4/student_record.db): Database used in Q3
+
+## Week 5
+Plotting the output of an SQL query and downloading/extracting links from a webpage
+* [exercise-1.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-5/exercise-1.py): Python script which extracts grades from a database and produces a histogram
+* [exercise-2.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-5/exercise-2.py): Creating and populating a basic table with SQLite3
+* [link-extractor.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-5/link-extractor.py): Extracts all links from a defined webpage
+* [student_grade.db](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-5/student_grade.db): Database used in exercise-1
