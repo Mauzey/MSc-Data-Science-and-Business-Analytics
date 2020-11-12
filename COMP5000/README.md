@@ -41,3 +41,11 @@ Plotting the output of an SQL query and downloading/extracting links from a webp
 * [exercise-2.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-5/exercise-2.py): Creating and populating a basic table with SQLite3
 * [link-extractor.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-5/link-extractor.py): Extracts all links from a defined webpage
 * [student_grade.db](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-5/student_grade.db): Database used in exercise-1
+
+## Week 6
+Event-Driven Programming and GUI with Python
+* [img](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/COMP5000/Week-6/img): Images used in Q2
+* [Q1.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-6/Q1.py): Python Programming
+* [Q2.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-6/Q2.py): Displaying Images
+* [Q3.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-6/Q3.py): Creating a GUI
+* [life-expectancy-females-2010-2014.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-6/life-expectancy-females-2010-2014.csv): Data used in Q1
