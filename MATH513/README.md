@@ -45,6 +45,10 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 * [practical-5.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-5/practical-5.R): R code which introduces function writing
 
 ## Session 6 - Twitter
+* [practical-6.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-6/practical-6.R): R code which introduces rtweet and sentiment analysis
+* [exercise.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-6/exercise.R): Twitter analysis using rtweet
+* [3dprinting-tweets.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-6/3dprinting-tweets.csv): Tweets gathered for [exercise](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-6/exercise.R)
+* [3dprinting-users.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-6/3dprinting-users.csv): User information gathered for [exercise](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-6/exercise.R)
 
 ## Session 7 - Working with Databases in R
 * [exercise.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-7/exercise.R): Working with SQLite databases in R
