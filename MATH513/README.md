@@ -60,5 +60,11 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 * [exercise.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-8/exercise.pdf): .pdf export of the exercise markdown document
 
 ## Session 9 - R Packages (part 1)
+* [myfirstRpack](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513/Session-9/myfirstRpack): Package structure
+* [Child_Eye_Data.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-9/Child_Eye_Data.csv): Data used in creating the package
+* [MATH513_Questionnaire_Data.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-9/MATH513_Questionnaire_Data.csv): Data used in creating the package
+* [exercise.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-9/exercise.R): Examples of package usage
+* [myfirstRpack_1.0.0.9000.tar.gz](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-9/myfirstRpack_1.0.0.9000.tar.gz): Built package which could be submitted to CRAN
+* [myfirstRpack_1.0.0.9000.zip](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-9/myfirstRpack_1.0.0.9000.zip): Build package for Windows which could be submitted to CRAN
 
 ## Session 10 - R Packages (part 2)
