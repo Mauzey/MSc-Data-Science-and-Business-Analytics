@@ -49,3 +49,7 @@ Event-Driven Programming and GUI with Python
 * [Q2.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-6/Q2.py): Displaying Images
 * [Q3.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-6/Q3.py): Creating a GUI
 * [life-expectancy-females-2010-2014.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-6/life-expectancy-females-2010-2014.csv): Data used in Q1
+
+## Week 7
+Object Oriented Programming, Unit Testing, and Database Design
+* [exercise-1.py](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/COMP5000/Week-7/exercise-1.py): Creating a Cube class which has methods to return the volume and surface area
