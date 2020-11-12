@@ -1,5 +1,5 @@
 # Exercise 1
-# Create a Cube class which is has methods which return the volume and surface area
+# Create a Cube class which has methods to return the volume and surface area
 
 # Import and Setup
 import unittest
