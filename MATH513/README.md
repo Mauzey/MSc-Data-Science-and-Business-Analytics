@@ -68,3 +68,4 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 * [myfirstRpack_1.0.0.9000.zip](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-9/myfirstRpack_1.0.0.9000.zip): Built package for Windows
 
 ## Session 10 - R Packages (part 2)
+This session is a continuation from Session 9, so all files listed under Session 9 can be associated with Session 10 as well.
