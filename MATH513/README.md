@@ -65,6 +65,6 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 * [MATH513_Questionnaire_Data.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-9/MATH513_Questionnaire_Data.csv): Data used in creating the package
 * [exercise.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-9/exercise.R): Examples of package usage
 * [myfirstRpack_1.0.0.9000.tar.gz](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-9/myfirstRpack_1.0.0.9000.tar.gz): Built package which could be submitted to CRAN
-* [myfirstRpack_1.0.0.9000.zip](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-9/myfirstRpack_1.0.0.9000.zip): Build package for Windows which could be submitted to CRAN
+* [myfirstRpack_1.0.0.9000.zip](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-9/myfirstRpack_1.0.0.9000.zip): Built package for Windows
 
 ## Session 10 - R Packages (part 2)
