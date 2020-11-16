@@ -1,0 +1,164 @@
+---
+title: "Session 2 - Reading Data Manipulation"
+author: "Alex Mounsey"
+date: "11/16/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(dplyr)
+library(ggplot2)
+```
+
+## The Student Questionnaire Dataset
+
+The file `MATH513_Questionnaire_Data.csv` contains information regarding a group 
+of University of Plymouth students. A transcription error has been introduced 
+for illustration purposes. Your task is to read in the data, perform data 
+manipulation, and produce appropriate plots of specific variables.
+
+**Read in the data from the file `MATH513_Questionnaire_Data.csv` using the 
+function `read_csv()` from the `readr` package, and take a look at the data:**
+```{r, message=FALSE}
+q_data <- read_csv('../data/MATH513_Questionnaire_Data.csv')
+head(q_data)
+```
+
+Suppose you are helping a team of health scientists that are studying the eating 
+and drinking habits of the group of students. **Show the height, age, sex, and 
+sports habits of the students who eat meat, drink coffee, and like beer:**
+```{r}
+filtered_q_data <- q_data %>%
+  filter(EatMeat == 'Yes', DrinkCoffee == 'Yes', LikeBeer == 'Yes')
+
+select(filtered_q_data, Height, Age, Sex, Sports)
+```
+
+The company which manages student accommodation is interested in analysing 
+feedback about the quality of its services. Suppose now that you are helping the 
+accommodation company. **Show interesting summary statistics about the 
+interviewed students, such as the average and minimum `Sleep` time, and the median 
+and maximum `Rent`. Split the results by students who are happy/not happy with 
+their accommodation and those who do/don't feel safe. Additionally, show the 
+number of students in each category. Comment on these results:**
+```{r, message=FALSE}
+q_data_by_happiness <- q_data %>%
+  group_by(Happy_accommodation, Safe)
+
+summarise(q_data_by_happiness,
+          avg_sleep = mean(Sleep), min_sleep = min(Sleep),
+          med_rent = median(Rent), max_rent = max(Rent),
+          n_students = n())
+```
+
+## Dealing with Anomalous Points: Two Alternatives using `dplyr`
+
+**Consider the entire questionnaire dataset. How many females and how many males 
+are there?**
+```{r}
+count(q_data, vars = Sex)
+```
+
+**Produce boxplots of `Age`, stratified by `Sex`, using `geom_boxplot()`:**
+```{r}
+ggplot(q_data, aes(x = Sex, y = Age, fill = Sex)) +
+  theme_light() + geom_boxplot(varwidth = 1) +
+  labs(x = "Sex", y = "Age (years)",
+       title = "Distribution of Age by Sex") +
+  theme(legend.position = 'none')
+```
+
+There is clearly a problem with the data in that no student is under 15 years old. 
+**Use `dplyr` to work out the minimum `Age`, to be called `min_age`, for each gender:**
+```{r, message=FALSE}
+min_age_by_sex <- q_data %>%
+  group_by(Sex) %>%
+  summarise(min_age = min(Age))
+
+min_age_by_sex
+```
+
+**Extract the minimum `Age` for males, using the `filter()` method followed by 
+`select()`:**
+```{r}
+min_age_male <- min_age_by_sex %>%
+  filter(Sex == 'Male') %>%
+  select(min_age) %>%
+  as.numeric()
+
+min_age_male
+```
+
+### First Way of Handling the Anomalous Point
+
+**Omit the data corresponding to the person with this anomalous age value by 
+using `filter()` to include only rows where `Age >= 17` _(as a sensible lower 
+bound)_, saving the result in `q_data_omitted`:
+```{r}
+q_data_omitted <- q_data %>%
+  filter(Age >= 17)
+
+q_data_omitted$Age
+```
+
+**Now produce a boxplot of `Age`, stratified by `Sex`, using the data in 
+`q_data_omitted`, from which the data corresponding to the person with the 
+anomalous `Age` value has been omitted:**
+```{r}
+ggplot(q_data_omitted, aes(x = Sex, y = Age, fill = Sex)) +
+  theme_light() + geom_boxplot(varwidth = 1) +
+  labs(x = "Sex", y = "Age (years)",
+       title = "Distribution of Age by Sex") +
+  theme(legend.position = 'none')
+```
+
+### Second Way of Handling the Anomalous Point
+
+**Calculate the median `Age` of all males who didn't provide an unrealistic age, 
+producing a numerical result using `as.numeric()`:**
+```{r, message=FALSE}
+median_age_male <- q_data_omitted %>%
+  group_by(Sex) %>%
+  summarise(median_age = median(Age)) %>%
+  filter(Sex == 'Male') %>%
+  select(median_age) %>%
+  as.numeric()
+
+median_age_male
+```
+
+**Replace the unrealistic values for `Age` (`min_age_male`) with 
+`median_age_male`:**
+```{r}
+q_data_corrected <- q_data %>%
+  mutate(Age_corrected = ifelse(Age == min_age_male, median_age_male, Age))
+
+# Check that the minimum age for males is no longer an unrealistic value:
+q_data_corrected %>%
+  group_by(Sex) %>%
+  summarise(min_age = min(Age_corrected))
+```
+
+**Produce a boxplot of `Age`, stratified by `Sex`, using the data in 
+`q_data_corrected`:**
+```{r}
+ggplot(q_data_corrected, aes(x = Sex, y = Age_corrected, fill = Sex)) +
+  theme_light() + geom_boxplot(varwidth = T) +
+  labs(x = "Sex", y = "Age (years)",
+       title = "Distribution of Age by Sex",
+       subtitle = "Anomalous values for age have been replaced with the median") +
+  theme(legend.position = 'none')
+```
+
+The interquartile range is a measure of spread which is more robust to outliers 
+than the standard deviation, and can be obtained in R using `IQR()`. **Compare 
+the means, medians, standard deviations, and interquartile ranges of `Age` across 
+`Sex`:**
+```{r}
+q_data_corrected %>%
+  group_by(Sex) %>%
+  summarise(mean_age = mean(Age_corrected), median_age = median(Age_corrected),
+            sd_age = sd(Age_corrected), iqr_age = IQR(Age_corrected))
+```
