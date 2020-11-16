@@ -7,10 +7,9 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 * [s1-exercises.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-01/s1-exercises.pdf): Completed session 1 exercises as .pdf
 
 ## Session 2 - Reading Data Manipulation
-* [MATH513_Questionnaire_Data.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-2/MATH513_Questionnaire_Data.csv): CSV data used during this session
-* [MATH513_Questionnaire_Data.xlsx](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-2/MATH513_Questionnaire_Data.xlsx): XLSX data used during this session
-* [exercise.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-2/exercise.R): Reading In and Manipulating Data with readr and dplyr
-* [practical-2.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-2/practical-2.R): R code which introduces reading and manipulating data in R with readr and dplyr
+* [practical-2.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-02/practical-2.R): Session 2 teaching material
+* [s2-exercises.Rmd](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-02/s2-exercises.Rmd): Completed session 2 exercises as .Rmd
+* [s2-exercises.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-02/s2-exercises.pdf): Completed session 2 exercises as .pdf
 
 ## Session 3 - Data Manipulation with tidyr
 * Exercises
