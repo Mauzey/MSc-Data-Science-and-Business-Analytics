@@ -69,3 +69,13 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 
 ## Session 10 - R Packages (part 2)
 This session is a continuation from Session 9, so all files listed under Session 9 can be associated with Session 10 as well.
+
+## Session 13 - Summary Statistics, Linear Regression, and Correlation
+* Exercises:
+  * [exercise-1.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-13/exercise-1.R): Simple Linear Regression
+  * [exercise-2.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-13/exercise-2.R): Multiple Regression
+  * [exercise-2.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-13/exercise-3.R): Multiple Regression (continued)
+  * [exercise-4.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-13/exercise-4.R): Transformations
+* [forbes.rda](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-13/forbes.rda): Data used in exercise 1
+* [MATH513_Questionnaire_Data.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-13/MATH513_Questionnaire_Data.csv): Data used in exercise 4
+* [practical-13.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-13/practical-13.R): R code which introduces Summary Statistics, Linear Regression, and Correlation
