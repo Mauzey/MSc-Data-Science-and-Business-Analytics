@@ -70,6 +70,12 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 ## Session 10 - R Packages (part 2)
 This session is a continuation from Session 9, so all files listed under Session 9 can be associated with Session 10 as well.
 
+## Session 11 - Simple Linear Regression Model (part 1)
+This session was based on theory. No practical work was produced or required.
+
+## Session 12 - Simple Linear Regression Model (part 2)
+This session was based on theory. No practical work was produced or required.
+
 ## Session 13 - Summary Statistics, Linear Regression, and Correlation
 * Exercises:
   * [exercise-1.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-13/exercise-1.R): Simple Linear Regression
