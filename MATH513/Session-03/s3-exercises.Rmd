@@ -1,0 +1,234 @@
+---
+title: "Session 3 - Manipulating Data with dplyr and tidyr"
+author: "Alex Mounsey"
+date: "11/16/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readxl)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(readr)
+```
+
+## Exercise 1: Bank Data
+
+The file `bank.xlsx` contains information regarding the customers of a bank, 
+such as their town of residence, occupation, gender, and initial salary _(i.e. 
+when they opened their account)_ and current salary in GBP _(£)_.
+
+**Import `bank.xlsx` into R, naming the resulting R object `bank_data`. Take a 
+look at the first few rows of `bank_data`:**
+```{r}
+bank_data <- read_excel('../data/bank.xlsx')
+head(bank_data)
+```
+
+Note that the result is a 'tibble' _(or tidy table)_, which is a clever type of 
+data frame.
+
+**Create a new variable, `diff_sal`, as the difference between the current and 
+initial salary:**
+```{r}
+bank_data <- bank_data %>%
+  mutate(diff_sal = curr_sal - init_sal)
+
+head(bank_data, 1)
+```
+
+**Considering only males, calculate the mean of `diff_sal` for each job 
+category and show how many males are in each job category:**
+```{r}
+filter(bank_data, gender == 'M') %>%
+  group_by(job) %>%
+  summarise(count = n(), mean_diff_sal = mean(diff_sal))
+```
+
+**Create a new categorical variable, `curr_sal_new`, which takes the value 'high' 
+when `curr_sal` is greater than £20,000 and the value 'low' otherwise:**
+```{r}
+bank_data <- bank_data %>%
+  mutate(curr_sal_new = ifelse(curr_sal > 20000, 'high', 'low'))
+
+bank_data[c(1, 6),]
+```
+
+**Selecting only the variables `town`, `gender`, `init_sal`, and `curr_sal`, 
+reshape the data frame to obtain one value indicating the type of salary 
+_(`sal_type`)_ and one variable indicating the value of the salary 
+_(`sal_value`)_. Finally, order the data frame by `sal_value` in ascending order:**
+```{r}
+bank_data <- bank_data %>%
+  gather('sal_type', 'sal_value', 4:5) %>%
+  select(town, gender, sal_type, sal_value) %>%
+  arrange(sal_value)
+
+head(bank_data)
+```
+
+## Exercise 1.2: Other Graphical Displays of the Data
+
+**Produce and comment a set of histograms depicting `sal_value`, faceted by 
+`gender` and `sal_type`:**
+```{r, message=FALSE}
+# Rename variables for better readability
+bank_data <- bank_data %>%
+  mutate(sal_type = factor(sal_type,
+                           levels = c('init_sal', 'curr_sal'),
+                           labels = c('Initial_Salary', 'Current_Salary')))
+
+# Plot salary by gender and salary type
+ggplot(bank_data, aes(x = sal_value)) +
+  theme_light() + geom_histogram() +
+  facet_grid(gender ~ sal_type) +
+  labs(x = "Salary (£)", y = "Count",
+       title = "Salary Value",
+       subtitle = "Split by gender and salary type")
+```
+
+### Comments:
+
+Salary for both males and females have become more distributed _(males more so)_. 
+At a glance, it appears that there are more males in the sample than females. Males 
+appear to have a higher average salary than females.
+
+**Produce and comment on a set of boxplots depicting `sal_type` against 
+`sal_value`, faceted by `gender`:**
+```{r}
+ggplot(bank_data, aes(x = sal_type, y = sal_value)) +
+  theme_light() + geom_boxplot() +
+  facet_grid(. ~ gender) +
+  labs(x = "Type of Salary", y = "Salary (£)",
+       title = "Type of Salary vs. Salary Value",
+       subtitle = "Split by gender")
+```
+
+## Exercise 2: 'Sailing & Dreams' Customer Satisfaction
+
+A UK maritime transport company runs a transfer service between the UK and France. 
+It has recently launched a new line of ferries, called 'Sailing & Dreams', 
+offering many new services to passengers. In order to evaluate satisfaction 
+towards this new line, the company has collected data from its passengers by 
+means of an interview process.
+
+The data is provided in three separate `.csv` files, which include the following 
+information:
+
+* **`PersonalInfo.csv`**, containing the variables:
+  * _ID_: The passenger's ID
+  * _Gender_: The passenger's gender (1: male, 2: female)
+  * _Age_: The passenger's age (in years)
+  * _Job_: The passenger's type of occupation
+* **`PassengersInfo.csv`**, containing the variables:
+  * _ID_: The passenger's ID
+  * _FirstTime_: Whether the passenger is traveling with the company for the first 
+  time (0: no, 1: yes)
+  * _WorkHoliday_: Whether the passenger is traveling on holiday, or for work 
+  (0: holiday, 1: work)
+  * _Price_: The price of the trip in GBP (£)
+  * _Propensity_: Whether the passenger intends to travel again on the 'Sailing 
+  & Dreams' line (1: yes, 2: no)
+* **Questionnaire.csv**, containing the passenger's ID _(ID)_ and the answers 
+to the 14 questions of a questionnaire about their satisfaction with the service; 
+answers to each of the questions are values between `0` and `5`, where:
+  * `0`: Poor
+  * `1`: Unsatisfactory
+  * `2`: Acceptable
+  * `3`: Satisfactory
+  * `4`: Good
+  * `5`: Excellent
+
+**Use the information in the file `PassengersInfo.csv` to calculate interesting 
+summary statistics about the passengers, split down into sensible groups such as 
+the mean, variance, standard deviation, minimum and maximum price paid, travel 
+times, and travel purpose:**
+```{r, message=FALSE}
+passenger_data <- read_csv('../data/PassengersInfo.csv')
+
+passenger_data %>%
+  group_by(FirstTime, WorkHoliday) %>%
+  summarise(avg_price = mean(Price), var_price = var(Price), sd_price = sd(Price), 
+            min_price = min(Price), max_price = max(Price))
+```
+
+**Create a single data frame, merging the three files: `PersonalInfo.csv`, 
+`PassengersInfo.csv`, and `Questionnaire.csv` on the primary key `ID`, retaining 
+only the rows present in all data frames:**
+```{r, message=FALSE}
+personal_data <- read_csv('../data/PersonalInfo.csv')
+question_data <- read_csv('../data/Questionnaire.csv')
+
+combined_data <- inner_join(personal_data, passenger_data, by = 'ID')
+combined_data <- inner_join(combined_data, question_data, by = 'ID')
+
+combined_data
+```
+
+**Create a new variable, `Job_2`, which combines the categories of `Job` into 
+_`student`, `professional`, `not_working`, and `retired`_, using `ifelse()`. 
+Then, tabulate the resulting `Job_2` variable:**
+```{r}
+combined_data <- combined_data %>%
+  mutate(Job_2 = 
+           ifelse(Job == 'howsewife', 'not_working',
+           ifelse(Job == 'unemployed', 'not_working',
+           ifelse(Job == 'retired', 'retired',
+           ifelse(Job == 'student', 'student',
+                  'professional')))))
+
+table(combined_data$Job_2)
+```
+
+**Transform the variables `Propensity`, `FirstTime`, `WorkHoliday`, `Job_2`, and 
+`Gender` into factors:**
+```{r}
+combined_data <- combined_data %>%
+  mutate(Job_2_f = factor(Job_2)) %>%
+  mutate(WorkHoliday_f = factor(WorkHoliday, labels = c('Holiday', 'Work'))) %>%
+  mutate(Propensity_f = factor(Propensity, labels = c('Yes', 'No'))) %>%
+  mutate(FirstTime_f = factor(FirstTime, labels = c('No, Yes'))) %>%
+  mutate(Gender_f = factor(Gender, labels = c('Male', 'Female')))
+```
+
+**Produce a histogram of `Price`, coloured according to `Propensity`, and faceted 
+by `FirstTime` and `WorkHoliday`:**
+```{r, message=FALSE}
+ggplot(combined_data, aes(x = Price, fill = Propensity_f)) +
+  theme_light() + geom_histogram() +
+  facet_grid(WorkHoliday_f ~ FirstTime_f) +
+  labs(x = "Trip Price (£)", y = "Count", fill = "Propensity",
+       title = "Histograms of Trip Price",
+       subtitle = "Faceted by WorkHoliday and FirstTime, filled according to Propensity")
+```
+
+**Produce a boxplot of `Age`, stratified by `Job_2`, and faceted by `Gender`:**
+```{r}
+ggplot(combined_data, aes(x = Job_2_f, y = Age, fill = Job_2_f)) +
+  theme_light() + geom_boxplot(varwidth = T) +
+  facet_grid(. ~ Gender_f) +
+  labs(x = "Occupation", y = "Age (years)", fill = "Occupation",
+       title = "Age Stratified by Occupation and Gender") +
+  theme(axis.text.x = element_text(size = 6.5, angle = 75, vjust = 0.5))
+```
+
+**Create a global satisfaction indicator, names `Score`, being the sum of the 
+scores of all 14 questions:**
+```{r}
+combined_data <- combined_data %>%
+  mutate(Score = PortCleanliness + PortComfort + PortStaff + Security + Accessibility +
+           Disabled + Cost + SeatAvailability + JourneyTime + CleanlinessOnBoard + 
+           ComfortOnBoard + StaffOnBoard + ServiceOnBoard + FoodOnBoard)
+```
+
+**Create a boxplot of `Score`, stratified by `Gender`, and faceted by `WorkHoliday` 
+and `FirstTime`:**
+```{r}
+ggplot(combined_data, aes(x = Gender_f, y = Score, fill = Gender_f)) +
+  theme_light() + geom_boxplot() +
+  facet_grid(WorkHoliday_f ~ FirstTime_f) +
+  labs(x = "Gender", y = "Score",
+       title = "Score Stratified by Gender, WorkHoliday, and FirstTime")
+```

@@ -42,7 +42,7 @@ library(readr)
 #
 # Read in the data in the file "MATH513_Questionnaire_Data.csv"
 
-qd <- read_csv("Session-3/MATH513_Questionnaire_Data.csv")
+qd <- read_csv('../data/MATH513_Questionnaire_Data.csv')
 #
 # See the first few rows
 #
@@ -231,7 +231,7 @@ full_join(a, b_var, by = c("x1" = "x1_var"))
 # Make sure that you've set the working directory appropriately
 #
 library(readr)
-wide <- read_csv("Session-3/wide_data.csv")
+wide <- read_csv('../data/wide_data.csv')
 wide
 names(wide)
 #
