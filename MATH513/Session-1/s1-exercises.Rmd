@@ -185,7 +185,7 @@ production volume.
 represented as text-based data points:**
 ```{r}
 ggplot(df, aes(x = volume, y = costs, label = row.names(df))) +
-  theme_light() + geom_text()
+  theme_light() + geom_text() +
   labs(x = "Production Volume (1000s of units)",
        y = "Production Costs (£1,000s)",
        title = "Production Volume vs. Production Costs over Time",
