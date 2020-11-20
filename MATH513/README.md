@@ -69,3 +69,8 @@ This session was based on theory. No practical work was produced or required.
 * [forbes.rda](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-13/forbes.rda): Data used in exercise 1
 * [MATH513_Questionnaire_Data.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-13/MATH513_Questionnaire_Data.csv): Data used in exercise 4
 * [practical-13.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-13/practical-13.R): R code which introduces Summary Statistics, Linear Regression, and Correlation
+
+## Session 14 - t-test and ANOVA (INCOMPLETE)
+* [practical-14.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-14/practical-14.R): Session 14 teaching material
+* [s14-exercises.Rmd](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-14/s14-exercises.Rmd): Completed session 14 exercises as .Rmd
+* [s14-exercises.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-14/s14-exercises.pdf): Completed session 14 exercises as .pdf
