@@ -43,7 +43,7 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 * [exercise.Rmd](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-8/exercise.Rmd): R Markdown document created as part of this session's practical exercise
 * [exercise.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-8/exercise.pdf): .pdf export of the exercise markdown document
 
-## Session 9 - R Packages (part 1)
+## Session 9 and Session 10 - R Packages
 * [myfirstRpack](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513/Session-9/myfirstRpack): Package structure
 * [Child_Eye_Data.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-9/Child_Eye_Data.csv): Data used in creating the package
 * [MATH513_Questionnaire_Data.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-9/MATH513_Questionnaire_Data.csv): Data used in creating the package
@@ -51,14 +51,8 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 * [myfirstRpack_1.0.0.9000.tar.gz](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-9/myfirstRpack_1.0.0.9000.tar.gz): Built package which could be submitted to CRAN
 * [myfirstRpack_1.0.0.9000.zip](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-9/myfirstRpack_1.0.0.9000.zip): Built package for Windows
 
-## Session 10 - R Packages (part 2)
-This session is a continuation from Session 9, so all files listed under Session 9 can be associated with Session 10 as well.
-
-## Session 11 - Simple Linear Regression Model (part 1)
-This session was based on theory. No practical work was produced or required.
-
-## Session 12 - Simple Linear Regression Model (part 2)
-This session was based on theory. No practical work was produced or required.
+## Session 11 and Session 12 - Simple Linear Regression Model
+These sessions were based on theory. No practical work was produced or required.
 
 ## Session 13 - Summary Statistics, Linear Regression, and Correlation
 * Exercises:
