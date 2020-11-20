@@ -1,0 +1,250 @@
+---
+title: "Session 14 - _t-test_ and ANOVA"
+author: "Alex Mounsey"
+date: "18/11/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+```
+
+## Exercise 1
+
+A new computer software package has been developed to help systems analysts 
+reduce the time required to design, develop, and implement an information 
+system. To evaluate the benefits of the new software package, a random sample 
+of twenty-four system analysts is selected. Each analyst is given 
+specifications for an information system. Twelve of the analysts are instructed 
+to produce the information system by using current technology. The other twelve 
+analysts are trained in the use of a new software package and then instructed 
+to use it to produce the information system. The completion times in hours for 
+the analysts to produce the information system is provided in this table:
+
+| Current Technology | New Software |
+| :----------------: | :----------: |
+| 300 | 274 |
+| 280 | 220 |
+| 344 | 308 |
+| 385 | 336 |
+| 372 | 198 |
+| 360 | 300 |
+| 288 | 315 |
+| 321 | 258 |
+| 376 | 318 |
+| 290 | 310 |
+| 301 | 332 |
+| 283 | 263 |
+Table: Completion Times in Hours
+
+```{r}
+ct_data <- read.csv('../data/completion_time.csv') %>%
+  rename('Current Technology' = Current.Technology,
+         'New Software' = New.Software)  # Remove '.' in column headers
+```
+
+Does the new software provide a _statistically significant_ different mean 
+project completion time? This means: is there an underlying difference in mean 
+project completion time for analysts using the current technology and analysts 
+using the new software. Answer the question following these steps:
+
+**Using the `gather()` function from the `tidyr` package, transform the data 
+into a more convenient format:**
+
+```{r}
+ct_long <- ct_data %>%
+  gather('Software', 'Completion_Time', 1:2)
+
+head(ct_long)
+```
+
+**Calculate the sample mean and standard deviation for both types of software:**
+```{r, message=FALSE}
+ct_long %>%
+  group_by(Software) %>%
+  summarise(mean = mean(Completion_Time), standard_deviation = sd(Completion_Time))
+```
+
+**Produce boxplots of the completion time for both types of software:**
+```{r}
+ct_long %>%
+  group_by(Software) %>%
+  ggplot(aes(x = Software, y = Completion_Time, colour=Software)) +
+    theme_light() + geom_boxplot() +
+    labs(x = "Software", y = "Completion Time (hours)",
+         title = "Time Taken to Implement Information Systems",
+         subtitle = "Grouped by the type of software used during development") +
+    theme(legend.position = 'none')
+```
+
+**Does the new software provide a statistically significant different mean 
+projcet completion time? Use a _t-test_, assuming that all the test assumptions 
+are met:**
+```{r}
+t.test(Completion_Time ~ Software, data = ct_long, var.equal = T)
+```
+```{r, echo=FALSE}
+pv <- t.test(Completion_Time ~ Software, data = ct_long, var.equal = T)$p.value
+```
+
+### Comments:
+The _p-value_ (`r pv`) is less than `0.05`. Therefore we can reject the null 
+hypothesis _(i.e. that there is no difference)_ and conclude that there is a 
+relationship between the type of software used and project completion times.
+
+
+**Now, check the _t-test_ assumptions:**
+```{r}
+ct_long %>%
+  group_by(Software) %>%
+  ggplot(aes(x = Completion_Time, fill = Software)) +
+    theme_light() + facet_grid(Software ~ .) +
+    geom_histogram(aes(y=..density..), binwidth = 15) +
+    geom_density(alpha = 0.2) +
+    labs(x = "Completion Time", y = "Density",
+         title = "Density of Completion Time",
+         subtitle = "Grouped by the type of software used during development") +
+    theme(legend.position = 'none')
+```
+```{r}
+curr_tech <- ct_long %>%
+  filter(Software == 'Current Technology')
+
+shapiro.test(curr_tech$Completion_Time)
+```
+```{r}
+new_soft <- ct_long %>%
+  filter(Software == 'New Software')
+
+shapiro.test(new_soft$Completion_Time)
+```
+```{r, echo=FALSE}
+ns_p <- shapiro.test(new_soft$Completion_Time)$p.value
+ct_p <- shapiro.test(curr_tech$Completion_Time)$p.value
+```
+
+### Comments:
+The _p-value_ for both the new software (`r ns_p`) and current technology (`r ct_p`) 
+are _above_ the threshold of `0.05`. Thus we can accept the null hypothesis.
+
+## Testing for a shorter mean project completion time, rather than a _different_ one
+
+It's also possible to answer a more relevant question: **"Does the new software 
+provide a statistically significant _shorter_ mean project completion time?"** 
+In order to answer this, we must provide an additional argument to the `t.test()` 
+function: `alternative = 'greater'`.
+
+```{r}
+t.test(Completion_Time ~ Software, data = ct_long, var.equal = TRUE,
+       alternative = 'greater')
+```
+```{r, echo=FALSE}
+pv <- t.test(Completion_Time ~ Software, data = ct_long, var.equal = TRUE,
+             alternative = 'greater')$p.value
+```
+
+**What do you conclude from the new _p-value_ of `r pv`?**
+
+### Comments:
+The _p-value_ (`r pv`) is less than the threshold of `0.05`, which suggests that 
+we should reject the null hypothesis.
+
+You may be wondering why, when we are testing for a significantly _shorter_ mean 
+project completion time, we specify `alternative = 'greater'`. This is because 
+the groups are ordered alphabetically as "Current Technology" and "New Software".
+
+We want to test whether the new software provides a statistically significant 
+_shorter_ mean project completion time than the current technology. Using the 
+specified group order, our question would be: **"is the underlying mean project 
+completion time associated with the _new software_?"** Of course, if we were to 
+specify the levels of the factor `Software` in the opposite order, we would 
+replace `alternative = 'greater'` with `alternative = 'less'`, giving the same 
+_p-value_:
+
+```{r}
+ct_long_2 <- ct_long %>%
+  mutate(Software_f = factor(Software, levels = c("New Software", "Current Technology")))
+
+t.test(Completion_Time ~ Software_f, data = ct_long_2, var.equal = TRUE,
+       alternative = 'less')
+```
+
+## Exercise 2
+
+Stress has become a large problem in today's workplace. In a study designed to 
+measure stress, `15` property agents, `15` architects, and `15` stockbrokers 
+were selected at random, and their stress levels were measured using an 
+established continuous scale which takes into account issues such as ambiguity 
+and role conflict. Higher values indicate a higher degree of stress.
+
+| Property Agent | Architect | Stockbroker |
+| :------------: | :-------: | :---------: |
+| 86 | 43 | 65 |
+| 53 | 63 | 48 |
+| 73 | 60 | 57 |
+| 74 | 52 | 91 |
+| 59 | 54 | 70 |
+| 67 | 77 | 67 |
+| 81 | 68 | 83 |
+| 61 | 57 | 75 |
+| 66 | 61 | 53 |
+| 70 | 80 | 71 |
+| 69 | 50 | 54 |
+| 74 | 37 | 72 |
+| 88 | 73 | 65 |
+| 90 | 84 | 58 |
+| 80 | 58 | 58 |
+Table: Stress Levels
+
+```{r}
+stress_data <- read.csv('../data/stress.csv') %>%
+  rename('Property Agent' = Property.Agent)
+```
+
+**Transform this data into a more convenient format:**
+```{r}
+sd_long <- stress_data %>%
+  gather('Profession', 'Stress', 1:3)
+
+head(sd_long)
+```
+
+**Calculate the overall sample mean and standard deviation:**
+```{r}
+sd_long %>%
+  group_by(Profession) %>%
+  summarise(mean = mean(Stress), standard_deviation = sd(Stress))
+```
+
+**Produce boxplots of the stress levels for each profession**
+```{r}
+sd_long %>%
+  group_by(Profession) %>%
+  ggplot(aes(x = Profession, y = Stress, fill = Profession)) +
+    theme_light() + geom_boxplot() +
+    labs(x = "Profession", y = "Stress",
+         title = "Stress Levels Across Sampled Professions") +
+    theme(legend.position = 'none')
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

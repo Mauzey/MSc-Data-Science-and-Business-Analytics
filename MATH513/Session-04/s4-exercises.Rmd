@@ -1,0 +1,308 @@
+---
+title: "Session 4 - ggplot2"
+author: "Alex Mounsey"
+date: "07/10/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(readr)
+library(ggplot2)
+library(readxl)
+library(scales)
+library(tidyr)
+```
+
+
+## Exercise 1
+
+Consider again the data collected by a farm management company from nine farms 
+in Devon about the number of cattle and sheep. It turns out that other 
+information is available, including the farm location and whether the opportunity 
+to participate in a working farm holiday is offered:
+
+$$
+Cattle = \left(\begin{matrix}
+  348 \\ 407 \\ 1064 \\ 750 \\ 593 \\ 1867 \\ 471 \\ 935 \\ 1443
+\end{matrix}\right) \qquad
+Sheep = \left(\begin{matrix}
+  110 \\ 179 \\ 303 \\ 173 \\ 182 \\ 458 \\ 151 \\ 140 \\ 222
+\end{matrix}\right) \qquad
+Location = \left(\begin{matrix}
+  North \\ South \\ South \\ North \\ South \\ North \\ North \\ North \\ South
+\end{matrix}\right) \qquad
+Holidays = \left(\begin{matrix}
+  No \\ No \\ Yes \\ Yes \\ No \\ Yes \\ No \\ No \\ Yes
+\end{matrix}\right)
+$$
+
+```{r}
+cattle <- c(348, 407, 1064, 750, 593, 1867, 471, 935, 1443)
+sheep <- c(110, 179, 303, 173, 182, 458, 151, 140, 222)
+location <- c('North', 'South', 'South', 'North', 'South', 'North', 'North',
+              'North', 'South')
+holidays <- c('No', 'No', 'Yes', 'Yes', 'No', 'Yes', 'No', 'No', 'Yes')
+```
+
+**Define categorical variables `location` and `holidays` as factors and create 
+a dataframe including these newly defined variables, as well as the `cattle` 
+and `sheep` variables that you've worked with before:**
+
+```{r}
+location_f <- factor(location, levels = c('North', 'East', 'South', 'West'))
+holidays_f <- factor(holidays, levels = c('Yes', 'No'))
+
+farms_df <- data.frame(cattle, sheep, location_f, holidays_f) %>%
+  rename(location = location_f, holidays = holidays_f)
+
+head(farms_df)
+```
+
+**Reproduce the plots shown in the tutorial file:**
+
+```{r, message=FALSE}
+ggplot(farms_df, aes(x = cattle, y = sheep)) +
+  theme_light() + geom_point() + geom_smooth(span = 1) +
+  labs(x = "Number of Cattle", y = "Number of Sheep",
+       title = "Livestock on Devonshire Farms")
+```
+
+```{r, message=FALSE}
+ggplot(farms_df, aes(x = cattle, y = sheep, colour = holidays)) +
+  theme_light() + geom_point() + geom_smooth(method = 'lm', se = F) +
+  facet_grid(holidays ~ location) +
+  labs(x = "Number of Cattle", y = "Number of Sheep",
+       colour = "Working Farm Holidays",
+       title = "Livestock on Devonshire Farms",
+       subtitle = "Faceted by location and working farm holidays")
+```
+
+## Exercise 2
+
+**Read the questionnaire data into a dataframe, `df`, in the usual way:**
+
+```{r, message=FALSE}
+q_data <- read_csv('../data/MATH513_Questionnaire_Data.csv')
+head(q_data)
+```
+
+**Using the `dplyr` package, select and display the columns _(variables)_ 
+`Travel_time` and `Distance`:**
+
+```{r}
+q_data %>%
+  select(Travel_time, Distance) %>%
+  head()
+```
+
+**Your goal is to understand how `Travel_time` is dependent on `Distance`. Use 
+`ggplot2` to plot `Travel_time` against `Distance`:**
+
+```{r, message=FALSE}
+ggplot(q_data, aes(x = Distance, y = Travel_time)) +
+  theme_light() +
+  geom_point() + geom_smooth() + geom_smooth(method = 'lm', se = F, colour = 'red') +
+  scale_x_log10() + scale_y_log10() +
+  labs(x = "Distance (miles)", y = "Travel Time (minutes)",
+       title = "Distance vs. Travel Time")
+```
+
+### Logarithmic Axis Scales
+
+The logarithmic scale is used in situations where data points range between 
+extremely large values and extremely small values, such that the detail of the 
+smaller values is not lost.
+
+### Regression Line
+
+The general mathematical equation of a straight line is:
+$$
+y = \alpha + \beta x
+$$
+where: $\alpha$ is known as the intercept and $\beta$ is known as the slope.
+
+When we're handling data, we can't expect the data points to lie perfectly on 
+the line, so we allow an error. The simple linear regression model therefore 
+takes the form:
+
+$$
+y = \alpha + \beta x + error
+$$
+
+## Exercise 3
+
+The file `companies.xlsx` contains information collected from 100 companies 
+belonging to different sectors of the economy. The following variables have been 
+recorded:
+
+* `company`: The company's ID
+* `net_income_2015`: The company's net income in 2015
+* `net_income_2014`: The company's net income in 2014
+* `oper_result`: The company's operational result in 2015
+* `lab_cost`: The company's labor expenditure in 2015
+* `n_empl`: The number of employees in the company
+* `sector`: The economic sector the company operates within
+
+```{r}
+c_data <- read_excel('../data/companies.xlsx')
+head(c_data)
+```
+
+**Create a new variable, `net_income_diff`, as the difference between the 2015 
+net income nad the 2014 net income:**
+
+```{r}
+c_data <- c_data %>%
+  mutate(net_income_diff = net_income_2015 - net_income_2014)
+
+head(c_data$net_income_diff)
+```
+
+**Produce a scatterplot of the net income difference _(on the vertical axis)_ 
+against the number of employees _(on the horizontal axis)_. Add a smooth curve 
+to your scatter plot.
+
+```{r, message=FALSE}
+ggplot(c_data, aes(x = n_empl, y = net_income_diff)) +
+  theme_light() + geom_point() + geom_smooth(span = 1) +
+  scale_y_continuous(label = comma) +
+  labs(x = "Number of Employees", y = "Net Income Difference (2014-2015)",
+       title = "Number of Employees vs. Net Income Difference from 2014 to 2015")
+```
+
+**Using only the companies with a positive number of employees and a positive 
+net income difference, modify the above plot to use a logarithmic scale on 
+both axis:**
+
+```{r, message=FALSE}
+filter(c_data, n_empl > 0 & net_income_diff > 0) %>%
+  ggplot(aes(x = n_empl, y = net_income_diff)) +
+    theme_light() + geom_point() + geom_smooth(span = 1) +
+    scale_x_log10(label = comma) + scale_y_log10(label = comma) +
+    labs(x = "Number of Employees", y = "Net Income Difference (2014-2015)",
+         title = "Number of Employees vs. Net Income Difference from 2014 to 2015")
+```
+
+**Using all of the companies, create a factor, `sector_new`, based on the 
+variable `sector`, such that the levels of the factor are labelled `catering`, 
+_(corresponding to 1)_, `hotels` _(corresponding to 2)_, `distribution` 
+_(corresponding to 3)_, and `communications` _(corresponding to 4)_:**
+
+```{r}
+c_data <- c_data %>%
+  mutate(sector_new = factor(sector, levels = 1:4,
+                             labels = c('Catering', 'Hotels', 'Distribution',
+                                        'Communications')))
+
+head(c_data$sector_new)
+```
+
+**Using all of the companies, produce a boxplot of `n_empl` against `sector_new`:**
+
+```{r, warning=FALSE}
+ggplot(c_data, aes(x = sector_new, y = n_empl, colour = sector_new)) +
+  theme_light() + geom_boxplot() +
+  scale_y_log10(label = comma) +
+  labs(x = "Sector", y = "Number of Employees",
+       title = "Economic Sector vs. Number of Employees") +
+  theme(legend.position = 'none')
+```
+
+**Using all of the companies, convert the continuous variable, `oper_result`, 
+_(which has units of GBP)_ into the continous variable `oper_result_millions` 
+_(with units of millions of GBP)_:**
+
+```{r}
+c_data <- c_data %>%
+  mutate(oper_result_millions = oper_result / 1000000)
+
+head(c_data$oper_result_millions)
+```
+
+**Using all of the companies, convert the continuous variable `oper_result_millions` 
+into the factor `oper_result_new`, with breaks at -5, 0, 0.25, and 3, in such a 
+way that the corresponding intervals are |-5, 0), |0, 0.25) and |0.25, 3):**
+
+```{r}
+c_data <- c_data %>%
+  mutate(oper_result_new = cut(x = oper_result_millions, breaks = c(-5, 0, 0.25, 3)))
+
+table(c_data$oper_result_new)
+```
+
+**Using all of the companies, produce histograms of `n_empl` split by 
+`oper_result_new`, using a logarithmic scale for the number of employees:**
+
+```{r, message=FALSE, warning=FALSE}
+ggplot(c_data, aes(x = n_empl, fill = oper_result_new)) +
+  theme_light() + geom_histogram() +
+  scale_x_log10(label = comma) +
+  facet_grid(oper_result_new ~ .) +
+  labs(x = "Number of Employees", y = "Count", fill = "Operational Result (millions £)",
+       title = "Number of Employees by Operational Result")
+```
+
+## Exercise 4: Displaying Student Assessment Data
+
+The file `Module_Marks_Invented_Example.csv` contains some student assessment 
+data. It would not be ethically correct to release students' marks, so these 
+marks are entirely fabricated, although they do share some of the properties 
+of real marks.
+
+Students take three modules: M1, M2, and M3. The coursework/examination/overall 
+marks are indicated by the suffix of the column title _(.C/.E/.F respectively)_.
+
+```{r, message=FALSE}
+m_data <- read_csv('../data/Module_Marks_Invented_Example.csv')
+head(m_data)
+```
+
+Note that as not all students take all modules, there are a lot of missing values.
+
+**Use the `gather()` function from the `tidyr` package to place all of the marks 
+into one column names `marks`, with another column named `source` indicating 
+the source of the marks _(i.e. M1.C, M1.E, M1.F, M2.C, M2.E, M2.F, M3.C, M3.E, 
+M3.F)_:**
+
+```{r}
+m_long <- gather(m_data, 'source', 'marks')
+head(m_long)
+```
+
+**Use the `separate()` function from the `tidyr` package to separate the `source` 
+column of `m_long` into two columns named `module` _(containing the module code 
+M1, M2, or M3)_ and `component` _(containing the assessment component C, E, or F)_. 
+Do not change the `marks` column:**
+
+```{r}
+m_long_2 <- m_long %>%
+  separate(col = source, into = c('module', 'component'), sep = '\\.')
+head(m_long_2)
+```
+
+**Use the `mutate()` function from `dplyr` to define `component` as a factor, 
+named `component_f`, with levels: "C", "E", and "F" and labels: "Coursework", 
+"Examination", and "Overall":**
+
+```{r}
+m_long_3 <- m_long_2 %>%
+  mutate(component_f = factor(component, levels = c('C', 'E', 'F'),
+                              labels = c('Coursework', 'Examination', 'Overall')))
+head(m_long_3$component_f)
+```
+
+**Finally, produce a boxplot of this data using `ggplot2`:**
+
+```{r, warning=FALSE}
+ggplot(m_long_3, aes(x = component_f, y = marks, fill = component_f)) +
+  theme_light() + geom_boxplot() + facet_grid(. ~ module) +
+  scale_fill_manual(values = c('orange', 'yellow', 'magenta')) +
+  scale_y_continuous(breaks = c(30, 40, 50, 60, 70, 100),
+                     minor_breaks = c(30, 40, 50, 60, 70, 80, 90, 100),
+                     limits = c(30, 100)) +
+  labs(x = "Component", y = "Mark (%)") +
+  theme(axis.text.x = element_text(size = 14, angle = 90, vjust = 0.5, hjust = 1),
+        legend.position = 'none')
+```
