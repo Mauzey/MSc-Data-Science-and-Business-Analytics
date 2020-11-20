@@ -2,21 +2,29 @@
 Sophisticated analytics techniques are needed to visualize today's increasing quantities of Big Data. Up-to-date R tools including dplyr for data manipulation, ggplot2 for visualization, and knitr/LaTeX for document presentation are studied. These are applied to database interrogation, social network visualization, and sentiment analysis. The module provides considerable experience of writing professionally documented R code using RStudio.
 
 ## Session 1 - Introduction
+Basic Data Structure, Summaries, Factors, and Plots
+
 * [practical-1.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-01/practical-1.R): Session 1 teaching material
 * [s1-exercises.Rmd](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-01/s1-exercises.Rmd): Completed session 1 exercises as .Rmd
 * [s1-exercises.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-01/s1-exercises.pdf): Completed session 1 exercises as .pdf
 
 ## Session 2 - Reading Data Manipulation
+Data Manipulation and Handling Anomalous Data Points
+
 * [practical-2.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-02/practical-2.R): Session 2 teaching material
 * [s2-exercises.Rmd](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-02/s2-exercises.Rmd): Completed session 2 exercises as .Rmd
 * [s2-exercises.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-02/s2-exercises.pdf): Completed session 2 exercises as .pdf
 
 ## Session 3 - Data Manipulation with tidyr
+Manipulating Data with dplyr/tidyr and Plots
+
 * [practical-3.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-03/practical-3.R): Session 3 teaching material
 * [s3-exercises.Rmd](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-03/s3-exercises.Rmd): Completed session 3 exercises as .Rmd
 * [s3-exercises.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-03/s3-exercises.pdf): Completed session 3 exercises as .pdf
 
 ## Session 4 - ggplot2 and Other Data Displays
+Regression Lines, Logarithmic Scales, Scatterplots, Histograms, and Boxplots
+
 * [practical-4.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-04/practical-4.R): Session 4 teachning materials
 * [s4-exercises.Rmd](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-04/s4-exercises.Rmd): Completed session 4 exercises as .Rmd
 * [s4-exercises.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-04/s4-exercises.pdf): Completed session 4 exercises as .pdf
@@ -65,6 +73,8 @@ These sessions were based on theory. No practical work was produced or required.
 * [practical-13.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-13/practical-13.R): R code which introduces Summary Statistics, Linear Regression, and Correlation
 
 ## Session 14 - t-test and ANOVA (INCOMPLETE)
+...
+
 * [practical-14.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-14/practical-14.R): Session 14 teaching material
 * [s14-exercises.Rmd](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-14/s14-exercises.Rmd): Completed session 14 exercises as .Rmd
 * [s14-exercises.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-14/s14-exercises.pdf): Completed session 14 exercises as .pdf
