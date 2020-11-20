@@ -17,15 +17,9 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 * [s3-exercises.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-03/s3-exercises.pdf): Completed session 3 exercises as .pdf
 
 ## Session 4 - ggplot2 and Other Data Displays
-* Exercises
-  * [exercise-1.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/exercises/exercise-1.R): Customizing Scatter Plots
-  * [exercise-2.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/exercises/exercise-2.R): Adding Logarithmic Scaling and Regression Lines to Plots
-  * [exercise-3.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/exercises/exercise-3.R): Further Scatter Plots, Box Plots, and Histograms
-  * [exercise-4.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/exercises/exercise-4.R): Further Box Plots
-* [MATH513_Questionnaire_Data.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/MATH513_Questionnaire_Data.csv): CSV data used in [exercise-2](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/exercises/exercise-2.R)
-* [Module_Marks_Invented_Example.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/Module_Marks_Invented_Example.csv): CSV data used in [exercise-4](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/exercises/exercise-4.R)
-* [companies.xlsx](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/companies.xlsx): XLSX data used in [exercise-3](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/exercises/exercise-3.R)
-* [practical-4.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-4/practical-4.R): R code which introduces ggplot2
+* [practical-4.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-04/practical-4.R): Session 4 teachning materials
+* [s4-exercises.Rmd](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-04/s4-exercises.Rmd): Completed session 4 exercises as .Rmd
+* [s4-exercises.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-04/s4-exercises.pdf): Completed session 4 exercises as .pdf
 
 ## Session 5 - Function Writing
 * Exercises
