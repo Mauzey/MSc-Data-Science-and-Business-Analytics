@@ -25,22 +25,24 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 ## Session 4 - ggplot2 and Other Data Displays
 ### Regression Lines, Logarithmic Scales, Scatterplots, Histograms, and Boxplots
 
-* [practical-4.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-04/practical-4.R): Session 4 teachning materials
+* [practical-4.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-04/practical-4.R): Session 4 teachning material
 * [s4-exercises.Rmd](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-04/s4-exercises.Rmd): Completed session 4 exercises as .Rmd
 * [s4-exercises.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-04/s4-exercises.pdf): Completed session 4 exercises as .pdf
 
 ## Session 5 - Function Writing
-* Exercises
-  * [exercise-1.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-5/exercises/exercise-1.R): Basic function writing
-  * [exercise-2.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-5/exercises/exercise-2.R): Further function writing
-* [MATH513_Questionnaire_Data.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-5/MATH513_Questionnaire_Data.csv): CSV data used during this session
-* [practical-5.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-5/practical-5.R): R code which introduces function writing
+
+* [practical-5.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-05/practical-5.R): Session 5 teaching material
+* [s5-exercises.Rmd](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-05/s5-exercises.Rmd): Completed session 5 exercises as .Rmd
+* [s5-exercises.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-05/s5-exercises.pdf): Completed session 5 exercises as .pdf
 
 ## Session 6 - Twitter
-* [practical-6.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-6/practical-6.R): R code which introduces rtweet and sentiment analysis
-* [exercise.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-6/exercise.R): Twitter analysis using rtweet
-* [3dprinting-tweets.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-6/3dprinting-tweets.csv): Tweets gathered for [exercise](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-6/exercise.R)
-* [3dprinting-users.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-6/3dprinting-users.csv): User information gathered for [exercise](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-6/exercise.R)
+
+* [practical-6.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-06/get-tweets.R): Session 6 teaching material
+* [s6-exercise.Rmd](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-06/s6-exercise.Rmd): Completed session 6 exercise as .Rmd
+* [s6-exercise.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-06/s6-exercise.pdf): Completed session 6 exercise as .pdf
+* [get-tweets.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-06/get-tweets.R): R Script to gather tweets via rtweet for the session 6 exercise
+* [tweets.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-06/tweets.csv): Tweet data gathered during the session 6 exercise
+* [users.csv](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-06/users.csv): User data gathered during the session 6 exercise
 
 ## Session 7 - Working with Databases in R
 * [exercise.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-7/exercise.R): Working with SQLite databases in R
