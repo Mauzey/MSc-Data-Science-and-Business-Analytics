@@ -42,16 +42,9 @@ my_se <- function(x){ # Take in x
 #
 library(readr)
 #
-# We need to specify a working directory where the file that we want to read in, 
-# here MATH513_Questionnaire_Data.csv, is stored
-#
-# If you have RStudio installed on your machine or you are using the University 
-# machines and your working directory is in your memory stick on the "D" drive:
-setwd("D://MATH513")
-#
 # Now read in the data
 #
-questionnaire_data <- read_csv("MATH513_Questionnaire_Data.csv") 
+questionnaire_data <- read_csv("../data/MATH513_Questionnaire_Data.csv") 
 #
 # Check the variable names
 #
