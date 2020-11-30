@@ -347,7 +347,7 @@ ggplot(df, aes(x = age, y = height, colour = sex_f)) +
 #
 library(readr)
 #
-qd <- read_csv("data/MATH513_Questionnaire_Data.csv") 
+qd <- read_csv("./data/MATH513_Questionnaire_Data.csv") 
 #
 #
 # A boxplot shows the median and lower and upper quartiles
@@ -580,4 +580,3 @@ cut_number(qd$Age, 4) # Approximately equal numbers
 table(cut_number(qd$Age, 4) )
 #
 cut_width(qd$Age, width = 2) # Specify the width
-

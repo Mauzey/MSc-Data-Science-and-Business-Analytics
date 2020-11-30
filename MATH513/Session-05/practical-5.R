@@ -44,7 +44,7 @@ library(readr)
 #
 # Now read in the data
 #
-questionnaire_data <- read_csv("../data/MATH513_Questionnaire_Data.csv") 
+questionnaire_data <- read_csv("./data/MATH513_Questionnaire_Data.csv") 
 #
 # Check the variable names
 #

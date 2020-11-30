@@ -41,8 +41,7 @@
 library(readr)
 #
 # Read in the data in the file "MATH513_Questionnaire_Data.csv"
-
-qd <- read_csv('../data/MATH513_Questionnaire_Data.csv')
+qd <- read_csv("./data/MATH513_Questionnaire_Data.csv")
 #
 # See the first few rows
 #
@@ -311,4 +310,3 @@ ggplot(long_with_times,
   labs(x = "Observation time (months)")
 #
 #
-

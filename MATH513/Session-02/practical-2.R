@@ -50,7 +50,7 @@ library(readr)
 #
 # Read in the data in the file "MATH513_Questionnaire_Data.csv"
 #
-qd <- read_csv("Session-2/MATH513_Questionnaire_Data.csv") 
+qd <- read_csv("./data/MATH513_Questionnaire_Data.csv") 
 #
 # See the first few rows
 #
@@ -94,7 +94,7 @@ library(readxl)
 # 
 # Please have a look at that file
 #
-qd_excel <- read_excel("../data/MATH513_Questionnaire_Data.xlsx", 
+qd_excel <- read_excel("./data/MATH513_Questionnaire_Data.xlsx", 
                        sheet = "MATH513_Questionnaire_Data") # Specify the sheet
 #
 # See the first few rows
