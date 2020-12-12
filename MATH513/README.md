@@ -29,7 +29,7 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 ## Session 1 - Introduction
 ### _Basic Data Structure, Summaries, Factors, and Plots_
 
-* [practical-1.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-01/practical-1.R): Session 01 teaching material
+* [practical-1.R](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-01/practical-1.R): Session 1 teaching material
 * [s1-exercises.Rmd](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-01/s1-exercises.Rmd): Completed session 1 exercises as .Rmd
 * [s1-exercises.pdf](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/blob/main/MATH513/Session-01/s1-exercises.pdf): Completed session 1 exercises as .pdf
 
