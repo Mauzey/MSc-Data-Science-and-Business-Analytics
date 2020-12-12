@@ -1,5 +1,30 @@
 # MATH513 | Big Data and Social Network Visualization
-Sophisticated analytics techniques are needed to visualize today's increasing quantities of Big Data. Up-to-date R tools including dplyr for data manipulation, ggplot2 for visualization, and knitr/LaTeX for document presentation are studied. These are applied to database interrogation, social network visualization, and sentiment analysis. The module provides considerable experience of writing professionally documented R code using RStudio.
+Sophisticated analytics techniques are needed to visualize today's increasing quantities of Big Data. Up-to-date R tools including `dplyr` for data manipulation, `ggplot2` for visualization, and `knitr`/LaTeX for document presentation are studied. These are applied to database interrogation, social network visualization, and sentiment analysis. The module provides considerable experience of writing professionally documented R code using RStudio.
+
+## Table of Contents
+[Session-01](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-1---introduction) - **Introduction:** _Basic data structure, summaries, factors, and plots_
+
+[Session-02](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-2---reading-data-manipulation) - **Reading Data Manipulation**: _Data manipulation, and handling anomalous data points_
+
+[Session-03](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-3---data-manipulation-with-tidyr) - **Data Manipulation with tidyr**: _Manipulating data with `dplyr` and `tidyr`, and more plots
+
+[Session-04](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-4---ggplot2-and-other-data-displays) - **`ggplot2` and Other Data Displays**: _Regression lines, logarithmic scales, scatterplots, histograms, and boxplots_
+
+[Session-05](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-5---function-writing) - **Function Writing**
+
+[Session-06](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-6---twitter) - **Twitter**: _Using `rtweet` to gather social media insights
+
+[Session-07](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-7---working-with-databases-in-r) - **Working with Databases in R**
+
+[Session-08](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-8---r-markdown) - **R Markdown**
+
+[Session-09 and Session-10](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-9-and-session-10---r-packages) - **R Packages**
+
+[Session-11 and Session-12](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-11-and-session-12---simple-linear-regression-model) - **Simple Linear Regression Model**
+
+[Session-13](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-13---summary-statistics-linear-regression-and-correlation) - **Summary Statistics, Linear Regression, and Correlation**
+
+[Session-14](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-14---t-test-and-anova-incomplete) - **T-Test and ANOVA**
 
 ## Session 1 - Introduction
 ### Basic Data Structure, Summaries, Factors, and Plots
