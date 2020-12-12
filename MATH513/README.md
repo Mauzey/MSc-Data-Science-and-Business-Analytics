@@ -6,7 +6,7 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 
 [Session-02](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-2---reading-data-manipulation) - **Reading Data Manipulation**: _Data manipulation, and handling anomalous data points_
 
-[Session-03](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-3---data-manipulation-with-tidyr) - **Data Manipulation with tidyr**: _Manipulating data with `dplyr` and `tidyr`, and more plots
+[Session-03](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-3---data-manipulation-with-tidyr) - **Data Manipulation with tidyr**: _Manipulating data with `dplyr` and `tidyr`, and more plots_
 
 [Session-04](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-4---ggplot2-and-other-data-displays) - **`ggplot2` and Other Data Displays**: _Regression lines, logarithmic scales, scatterplots, histograms, and boxplots_
 
