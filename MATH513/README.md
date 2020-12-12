@@ -12,7 +12,7 @@ Sophisticated analytics techniques are needed to visualize today's increasing qu
 
 [Session-05](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-5---function-writing) - **Function Writing**
 
-[Session-06](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-6---twitter) - **Twitter**: _Using `rtweet` to gather social media insights
+[Session-06](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-6---twitter) - **Twitter**: _Using `rtweet` to gather social media insights_
 
 [Session-07](https://github.com/Mauzey/MSc-Data-Science-and-Business-Analytics/tree/main/MATH513#session-7---working-with-databases-in-r) - **Working with Databases in R**
 
