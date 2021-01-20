@@ -1,320 +1,117 @@
-################################################################
-#
-###
-### Practical 1: Introduction
-###
-#
-## ------------------------------------------------------------------------
-#
-###
-### SOME BASICS
-###
-#
-# We type our R commands into a file 
-# (opened by File -> New File -> R Script, for example) 
-# so that they can be used again or modified
-# Please keep saving your work in the usual way
-#
-# Lines beginning with # are comment lines that we include to remind ourselves 
-# (and tell others) what we are doing
-#
-# Commands are processed in the R Console
-# Commands can be sent through to the R Console 
-# using "Ctrl" and "Enter" together (Windows), 
-# or clicking on the "Run" button
-#
-# Please run
-#
-3 + 4
-x <- 1:3 # x is an example of an R object
-x # To look at an R object just type its name
-x^2 # Square each element separately
-#
-citation() # To cite R
-#
-# We will use a number of contributed packages
-# These should be installed on University machines
-# On personal machines, they can be installed through 
-# "Packages" and then "Install" in the bottom right (or wherever) window
-#
-# Packages can also be installed at the command line:
-#
-install.packages("devtools", repos = "http://www.stats.bris.ac.uk/R/")
-#
-# Bristol is the nearest R package repository
-#
-# Other useful tabs
 
-# Environment tab: Shows the R objects that you have created, 
-# together with some of their values
+# Tutorial 01:  Introduction ------------------------------------------------------------------------------------------------
 
-# History tab: you can see and work with your previous R commands
+# We type our R commands into a file so that they can be used again or modified. Please keep saving your work in the usual
+# way.
+#
+# Lines beginning with '#' are comment lines that we include to remind ourselves (and tell others) what we are doing.
+#
+# Commands are processed in the R console. Commands can be sent through to the R console using 'CTRL+ENTER', or by clicking on
+# the 'Run' button in the top right corner of the editor.
 
-# Files tab: provides a useful file browser.  Click on a folder's name to see what it contains
-# After this, click on the two dots .. beside the green upward arrow to return to the original folder
-# We will make considerable use of the Files tab, so it would be a good idea to experiment with it
+citation()  # to cite R
 
-# Plots: plots!
+# We will use a number of contributed packages. These should be installed on University machines. On personal machines, they can
+# be installed through 'Packages' and then 'Install' in the bottom right window of RStudio. They can also be installed using the
+# command line:
+install.packages('devtools', repos = "http://www.stats.bris.ac.uk/R/")  # Bristol is the nearest R package repository
 
-# Help: one way to get help
+# Any line starting with '#' is a comment line; it is not interpreted by R
 
-# Packages: packages!
-#
-# To customize RStudio: Tools -> Global Options...-> Appearance or Pane Layout etc
-#
-#
-#
-#
-# To download R: http://www.stats.bris.ac.uk/R/
-#
-# For RStudio: https://www.rstudio.com/products/RStudio/
-#
-#
-##################################################################################
-##################################################################################
-##################################################################################
-#
-###
-### Tutorial 1
-###
-#
-## ------------------------------------------------------------------------
-#
-# ANY LINE STARTING WITH # IS A COMMENT LINE
-# IT IS NOT INTERPRETED BY R
-#
-## ------------------------------------------------------------------------
-#
-#
-# Inputting data by hand
-# The c function collects together the data
-# R is based on functions, such as c()
-# All functions are defined using round brackets ()
-#
-x <- c(53, 43, 58, 38, 49, 55)
-#
-# x is an R object containing the data
-# To see an R object, just type its name
-#
-x
-#
-# This is the age data, the units of which are months
-#
-# Another example
-#
-y <- c(98, 91, 104, 89, 97, 99)
-y
-#
-# This is the height data, the units of which are cms
-#
-# Other names can be used
-#
-# It's a good idea to use more meaningful names
-#
-age <- c(53, 43, 58, 38, 49, 55)
-age
-height <- c(98, 91, 104, 89, 97, 99)
+
+# Inputting Data by Hand ----------------------------------------------------------------------------------------------------
+
+# The 'c()' function collects data together. R is based on functions such as c(). All functions are defined using round brackets
+
+age <- c(53, 43, 58, 38, 49, 55)  # 'age' is an R object containing data. This is age data, the units of which are months
+age  # To inspect an R object, just enter its name
+
+height <- c(98, 91, 104, 89, 97, 99)  # another example. This is height data, the units of which are centimeters
 height
-#
-# Here we'll work with x and y, so that the code can be generalized
-#
-## ------------------------------------------------------------------------
-#
-# We can access individual elements of an R object or vector using the square brackets
-#
-x[2]
-2:4 # A integer sequence from 2 to 4
-x[2:4]
-#
-# To access the 3rd and 5th element
-#
-x[c(3,5)] # Note that we collect together 3 and 5 using c
-#
-# To access all elements except the 3rd and 5th
-#
-x[-c(3,5)]
-#
-#
-## ------------------------------------------------------------------------
-#
-# Creating a data frame
-#
-# A data frame is a very important R object
-# It allows us to keep related data together
-#
-df <- data.frame(x, y)
-df
-#
-# *** Rows correspond to individuals and columns correspond to variables ***
-# Just like in an Excel spreadsheet
-#
-View(df)
-#
-# The column names can be found
-#
-names(df)
-#
-# To access individual columns, i.e. individual variables
-# use the dollar
-#
-df$x
-df$y
-#
-# Alternatively
-#
-df[["x"]]
-df[["y"]]
-#
-#
-## ------------------------------------------------------------------------
-#
-# Plotting y (on the vertical axis) against x (on the horizontal axis)
-#
-# THE KEY IS TO BUILD UP YOUR USE OF R FUNCTIONS ONE STEP AT A TIME
-#
-# Basic data visualizations with ggplot2
-#
-# Load the ggplot2 package
-#
-library(ggplot2)
-#
-ggplot(df, aes(x = x, y = y)) + 
-  # We tell ggplot2 where to look for the data (in the data frame df) and 
-  # the **general features** or **aesthetics** of the graph,
-  # that is, what to plot on the x and y axis, and
-  geom_point() 
-#
-#
-# With axis labels
-#
-ggplot(df, aes(x = x, y = y)) + 
-  geom_point() +
-  labs(x = "Age (months)", y = "Height (cms)") # add labels for axes
-#
-# With a main title
-#
-ggplot(df, aes(x = x, y = y)) + 
-  geom_point() +
-  labs(x = "Age (months)", 
-       y = "Height (cms)", 
-       title = "Data from Children") # add title
-#
-# With a sub-title
-#
-ggplot(df, aes(x = x, y = y)) + 
-  geom_point() +
-  labs(x = "Age (months)", 
-       y = "Height (cms)", 
-       title = "Data from Children",
-       subtitle = "Random sample of size 6") # add subtitle
-#
-# With a better plotting character
-#
-ggplot(df, aes(x = x, y = y)) + 
-  geom_point(size = 3) + # increase size of points
-  labs(x = "Age (months)", 
-       y = "Height (cms)", 
-       title = "Data from Children",
-       subtitle = "Random sample of size 6") 
-#
-# With some colour
-#
-ggplot(df, aes(x = x, y = y)) + 
-  geom_point(size = 3, col = "red") + # plot red points
-  labs(x = "Age (months)", 
-       y = "Height (cms)", 
-       title = "Data from Children",
-       subtitle = "Random sample of size 6") 
-#
-## ------------------------------------------------------------------------
-#
-# Summary statistics
-#
-# The sample mean: a one number summary of the data, a typical value telling us where the data typically are
-# A measure of location
-#
-mean(x)
-#
-# It's the sum of the values divided by the number of values (sample size)
-#
-sum(x) /length(x)
-#
-# The sample median is a measure of location that divides the data into two parts with
-# the same number of data points in each
-# The sample median is less sensitive to outlying points than the sample mean
-#
-median(x)
-#
-#
-# We can check the median by sorting the values
-#
-sort(x)
-#
-#
-## ------------------------------------------------------------------------
-#
-# Getting help
-#
+
+age[2]  # we can access individual elements of an R object or vector using square brackets
+age[2:4]  # '2:4' is a sequence from 2 to 4
+
+age[c(3,5)]  # collect the 3rd and 5th elements using the 'c()' function
+age[-c(3,5)]  # collect all elements except the 3rd and 5th
+
+
+# Creating a Dataframe ------------------------------------------------------------------------------------------------------
+
+# Dataframes are very important objects within R. It allows us to keep related data together
+df <- data.frame(age, height)
+df  # rows correspond to individual observations and columns correspond to variables
+
+View(df)  # open the dataframe in the RStudio viewer
+names(df)  # return the column names
+
+# To access individual columns, use the '$' operator
+df$age
+df$height
+
+# or, alternatively:
+df['age']
+df[['height']]
+
+
+# Basic Plotting ------------------------------------------------------------------------------------------------------------
+
+# Plotting 'height' on the vertical axis against 'age' on the horizontal axis
+library(ggplot2)  # load the 'ggplot2' package
+
+# We tell 'ggplot2' where to look for the data and the general features (i.e. aesthetics) of the graph. That is, what to plot on
+# the x and y axis
+ggplot(df, aes(x = age, y = height)) +
+  # the type of plot to create (size = 3 increases the size of the data points) (col = 'red' colours the data points)
+  geom_point(size = 3, col = 'red') +
+  labs(x = "Age (months)", y = "Height (cms)",  # add labels for both axes
+       title = "Child Age vs. Height",  # add a title to the plot
+       subtitle = "Random sample size of 6")  # add a subtitle
+
+
+# Summary Statistics --------------------------------------------------------------------------------------------------------
+
+mean(age)  # the sample mean
+sum(age) / length(age)  # it's the sum of the values, divided by the number of values (sample size)
+
+median(age)  # the sample median. The median is less sensitive to outlying points than the sample mean
+sort(age)  # we can check the median by sorting the values
+
+
+# Getting Help --------------------------------------------------------------------------------------------------------------
+
 ?mean
-help("median")
-#
-#
-# Or use the help window
-#
-## ------------------------------------------------------------------------
-#
-# Factors
-#
-# Let's now assume that we know the sex of each child
-#
-sex <- c("M","M","M","F","F","F") # The sex of each child
+help('median')
+
+
+# Factors -------------------------------------------------------------------------------------------------------------------
+
+sex <- c('M', 'M', 'M', 'F', 'F', 'F')  # the sex of each child
 sex
-#
-# "F" and "M" are characters that are label of the sex of each child
-# To allow R to work with data like this comprising labels
-# we covert the R object into a factor
-#
-sex_f <- factor(sex) # Make it into a factor, as "F" and "M" are labels
+
+# 'M' and 'F' are characters that label the sex of each child. To allow R to work with data like this, comprising of labels, 
+# we convert the R object into a factor:
+sex_f <- factor(sex)
 sex_f
-#
-# We can tabulate using table:
-#
-table(sex_f)
-#
-# Put all the data into a data frame and look at it
-#
-df_2 <- data.frame(x, y, sex_f) 
+table(sex_f)  # we can tabulate using 'table()'
+
+df_2 <- data.frame(age, height, sex_f)  # compile all of the data into a dataframe
 df_2
-str(df_2) # To see the structure
-#
-## ------------------------------------------------------------------------
-#
-# Some more on factors
-#
-# Factors will be very important to us later in this module
-# Here is another example
-#
-# Data on the agreement of a group of people are recorded as 0 for "No" and 1 for "Yes":
-#   
-agreement <- c(0, 1, 1, 0, 0, 0, 0, 0, 0, 0)
+str(df_2)  # inspect the structure of the dataframe
+
+
+
+# Factors will be very important to use later in this module. Here is another example:
+agreement <- c(0, 1, 1, 0, 0, 0, 0, 0, 0, 0)  # 0 = 'No' and 1 = 'Yes'
 agreement
-#
-# Let's turn this into a factor with appropriate labels:
-#
-agreement_f  <- factor(agreement, levels = c(0,1), labels = c("No", "Yes"))
-agreement_f
-#
-# or, slightly shorter
-#
-agreement_f <- factor(agreement, levels = 0:1, labels = c("No", "Yes"))
-agreement_f
-#
-# We can tabulate using table:
-#
+
+# Convert to a factor with appropriate labels
+agreement_f <- factor(agreement, levels = c(0,1), labels = c('No', 'Yes'))
+# or, slightly shorter:
+agreement_f <- factor(agreement, levels = 0:1, labels = c('No', 'Yes'))
 table(agreement_f)
-#
-# We can impose a different order
-#
-agreement_f <- factor(agreement, levels = c(1,0), labels = c("Yes", "No"))
+
+# We can impose a different order:
+agreement_f <- factor(agreement, levels = c(1, 0), labels = c('Yes', 'No'))
 agreement_f
 table(agreement_f)
